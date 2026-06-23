@@ -16,6 +16,10 @@ npm install -g @anthropic-ai/claude-code
 # ── Claude config directory ───────────────────────────────────
 mkdir -p ~/.claude
 
+# ── Claude Memory ─────────────────────────────────────────────
+echo "🧠 Installing Claude memory..."
+npx claude-mem install
+
 echo "✅ Keith's environment is ready. Claude Code is live."
 # Install Superpowers plugin for Claude Code
 echo "🦸 Installing Superpowers..."
