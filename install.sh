@@ -32,3 +32,4 @@ claude plugin install document-skills@anthropic-agent-skills 2>/dev/null || true
 claude plugin install example-skills@anthropic-agent-skills 2>/dev/null || true
 
 echo "✅ Keith's environment is ready. Claude Code is live."
+npx -y skills add <repo> --agent claude-code -g
