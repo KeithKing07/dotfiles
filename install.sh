@@ -31,6 +31,12 @@ echo "📄 Installing Anthropic agent skills..."
 claude plugin install document-skills@anthropic-agent-skills 2>/dev/null || true
 claude plugin install example-skills@anthropic-agent-skills 2>/dev/null || true
 
+# ── Custom skills ─────────────────────────────────────────────
+echo "🎨 Installing custom skills..."
+npx -y skills add Leonxlnx/taste-skill --skill "design-taste-frontend" --agent claude-code -g 2>/dev/null || true
+npx -y skills add Jakubantalik/transitions.dev --agent claude-code -g 2>/dev/null || true
+npx -y skills add anthropics/skills --skill "web-artifacts-builder" --agent claude-code -g 2>/dev/null || true
+
 echo "✅ Keith's environment is ready. Claude Code is live."
 npx -y skills add <repo> --agent claude-code -g
 npx -y skills add Leonxlnx/taste-skill --skill "design-taste-frontend" --agent claude-code -g
