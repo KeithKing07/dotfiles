@@ -20,8 +20,15 @@ mkdir -p ~/.claude
 echo "🧠 Installing Claude memory..."
 npx claude-mem install
 
-echo "✅ Keith's environment is ready. Claude Code is live."
-# Install Superpowers plugin for Claude Code
+# ── Claude plugins ────────────────────────────────────────────
 echo "🦸 Installing Superpowers..."
-claude -p "/plugin install superpowers@claude-plugins-official" --no-interactive 2>/dev/null || true
-echo "✅ Superpowers ready"
+claude plugin install superpowers@claude-plugins-official 2>/dev/null || true
+
+echo "📚 Adding Anthropic skills marketplace..."
+claude plugin marketplace add anthropics/skills 2>/dev/null || true
+
+echo "📄 Installing Anthropic agent skills..."
+claude plugin install document-skills@anthropic-agent-skills 2>/dev/null || true
+claude plugin install example-skills@anthropic-agent-skills 2>/dev/null || true
+
+echo "✅ Keith's environment is ready. Claude Code is live."
