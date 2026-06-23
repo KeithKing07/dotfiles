@@ -17,3 +17,7 @@ npm install -g @anthropic-ai/claude-code
 mkdir -p ~/.claude
 
 echo "✅ Keith's environment is ready. Claude Code is live."
+# Install Superpowers plugin for Claude Code
+echo "🦸 Installing Superpowers..."
+claude -p "/plugin install superpowers@claude-plugins-official" --no-interactive 2>/dev/null || true
+echo "✅ Superpowers ready"
