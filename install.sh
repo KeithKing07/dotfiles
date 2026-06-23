@@ -36,5 +36,6 @@ echo "🎨 Installing custom skills..."
 npx -y skills add Leonxlnx/taste-skill --skill "design-taste-frontend" --agent claude-code -g 2>/dev/null || true
 npx -y skills add Jakubantalik/transitions.dev --agent claude-code -g 2>/dev/null || true
 npx -y skills add anthropics/skills --skill "web-artifacts-builder" --agent claude-code -g 2>/dev/null || true
+npx -y skills add szilu/ux-designer-skill --agent claude-code -g 2>/dev/null || true
 
 echo "✅ Keith's environment is ready. Claude Code is live."
